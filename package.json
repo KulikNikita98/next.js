@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "debug": "cross-env NODE_OPTIONS='--inspect' next dev",
+    "lint:fix": "next lint --fix",
+    "stylelint": "stylelint \"**/*.css\" --fix"
   },
   "dependencies": {
     "next": "12.2.2",
@@ -14,7 +17,14 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "eslint": "8.20.0",
-    "eslint-config-next": "12.2.2"
+    "@typescript-eslint/eslint-plugin": "^5.30.7",
+    "@typescript-eslint/parser": "^5.30.7",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.20.0",
+    "eslint-config-next": "12.2.2",
+    "stylelint": "^14.9.1",
+    "stylelint-config-standard": "^26.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-order-config-standard": "^0.1.3"
   }
 }
