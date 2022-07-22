@@ -1,42 +1,78 @@
 .button {
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 10px;
-    cursor: pointer;
-    text-align: center;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
+	display: inline-flex;
+	align-items: center;
+
+	box-sizing: border-box;
+	padding: 10px;
+
+	cursor: pointer;
+	text-align: center;
+
+	border: none;
+	border-radius: 5px;
+
+	font-size: 14px;
+}
+
+.arrow {
+	display: inline-block;
+	margin-left: 5px;
+}
+
+.down {
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.2s;
+	transition-property: transform;
+	transform: rotate(90deg);
 }
 
 .primary {
-    color: var(--white);
-    background-color: var(--primary);
-    transition-property: background-color;
-    transition-timing-function: ease-in-out;
-    transition-duration: .2s;
-}
-.primary:hover {
-    background-color: var(--primary-hover);
-    transition-property: background-color;
-    transition-timing-function: ease-in-out;
-    transition-duration: .2s;
-}
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.2s;
+	transition-property: background-color;
 
+	color: var(--white);
+	background-color: var(--primary);
+}
 
 .ghost {
-    color: var(--black);
-    background-color: transparent;
-    border: 1px solid var(--gray-light);
-    transition-property: background-color, color;
-    transition-timing-function: ease-in-out;
-    transition-duration: .2s;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.2s;
+	transition-property: background-color, color;
+
+	color: var(--black);
+	border: 1px solid var(--gray-light);
+	background-color: transparent;
+}
+
+.ghost svg {
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.2s;
+	transition-property: fill;
+	fill: var(--black);
+}
+
+.primary svg,
+.ghost:hover svg {
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.2s;
+	transition-property: fill;
+	fill: var(--white);
+}
+
+.primary:hover {
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.2s;
+	transition-property: background-color;
+
+	background-color: var(--primary-hover);
 }
 
 .ghost:hover {
-    background-color: var(--primary);
-    color: var(--white);
-    transition-property: background-color, color;
-    transition-timing-function: ease-in-out;
-    transition-duration: .2s;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.2s;
+	transition-property: background-color, color;
+
+	color: var(--white);
+	background-color: var(--primary);
 }
