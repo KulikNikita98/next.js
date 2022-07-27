@@ -1,0 +1,29 @@
+.filled {
+	transition-timing-function: ease-in;
+	transition-duration: 0.1s;
+	transition-property: fill;
+	fill: var(--primary);
+}
+
+.star {
+	transition-timing-function: ease-in;
+	transition-duration: 0.1s;
+	transition-property: fill;
+}
+
+.editable {
+	cursor: pointer;
+}
+
+.star-list {
+	display: flex;
+
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+
+.star-item {
+	padding-right: 5px;
+}

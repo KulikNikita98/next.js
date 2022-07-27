@@ -10,4 +10,4 @@ export const Paragraph = ({ size = 'medium', children, ...props }: ParagraphProp
     })}>
         {children}
     </p>;
-}
+};

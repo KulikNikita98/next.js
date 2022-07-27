@@ -11,7 +11,7 @@ export const Button = ({ appearance, arrow = "none", children, className, ...pro
             [styles.down]: arrow === 'down'
         })} />}
 
-    </button>
+    </button>;
 
 
 };
