@@ -22,7 +22,7 @@ function Home({menu}: HomeProps): JSX.Element {
         {menu.map((item) => (<li key={item._id.secondCategory}> {item._id.secondCategory} </li>))}
       </ul>
     </>
-  )
+  );
   
 }
 
@@ -40,8 +40,8 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
       menu,
       firstCategory
     }
-  }
-}
+  };
+};
 
 interface HomeProps extends Record<string, unknown> {
   menu: MenuItem[],

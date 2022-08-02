@@ -32,14 +32,14 @@ export interface Blog {
 export interface Sravnikus {
     metaTitle: string;
     metaDescription: string;
-    qas: any[];
+    qas: string[];
     _id: string;
 }
 
 export interface Learningclub {
     metaTitle: string;
     metaDescription: string;
-    qas: any[];
+    qas: string[];
     _id: string;
 }
 
@@ -55,16 +55,14 @@ export interface TopPageModal {
     metaTitle: string;
     metaDescription: string;
     firstCategory: TopLevelCategory;
-    advantages: Advantage[];
+    advantages: TopPageAdvantage[];
     createdAt: Date;
     updatedAt: Date;
     hh: HhData;
-    qas: any[];
-    addresses: any[];
+    qas: string[];
+    addresses: string[];
     categoryOn: string;
     blog: Blog;
     sravnikus: Sravnikus;
     learningclub: Learningclub;
 }
-
-

@@ -1,5 +1,5 @@
 
-export interface Characteristic {
+export interface ProductCharacteristic {
     name: string;
     value: string;
 }
@@ -10,7 +10,17 @@ export interface Blog {
     bigImage: string;
 }
 
-export interface RootObject {
+export interface ReviewModel {
+    _id: string;
+    name: string;
+    title: string;
+    description: string;
+    rateing: number;
+    createdAt:Date;
+
+}
+
+export interface ProductModel {
     _id: string;
     categories: string[];
     tags: string[];
@@ -21,7 +31,7 @@ export interface RootObject {
     price: number;
     credit: number;
     oldPrice: number;
-    characteristics: Characteristic[];
+    characteristics: ProductCharacteristic[];
     advantages: string;
     initialRating: number;
     createdAt: Date;
@@ -31,9 +41,9 @@ export interface RootObject {
     blog: Blog;
     companyId: string;
     clicks: number;
-    reviews: any[];
+    reviews: ReviewModel[];
     reviewCount: number;
-    reviewAvg?: any;
+    reviewAvg?: number;
 }
 
 

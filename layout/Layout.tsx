@@ -5,6 +5,7 @@ import React, { FunctionComponent } from 'react';
 import { Header } from './Header/Header';
 import { Footer } from './Footer/Footer';
 import { Sidebar } from './Sidebar/Sidebar';
+import { AppContextProvider, IAppContext } from '../context/app.context';
 
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
@@ -16,13 +17,17 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
             </main>
         <Footer className={styles.footer}/>
 
-    </div>)
-}
+    </div>);
+};
 
-export const withLayout = <T extends Record<string, unknown>>(Component: FunctionComponent<T>) => {
+export const withLayout = <T extends Record<string, unknown> & IAppContext>(Component: FunctionComponent<T>) => {
     return function withLayoutComponent(props: T): JSX.Element {
-        return (<Layout>
+        return (
+            <AppContextProvider menu={props.menu} firstCategory={props.firstCategory}>
+        <Layout>
             <Component {...props}></Component>
-        </Layout>)
-    }
-}
+        </Layout>
+        </AppContextProvider>
+        );
+    };
+};

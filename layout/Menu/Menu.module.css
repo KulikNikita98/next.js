@@ -1,0 +1,84 @@
+.menu {}
+
+.firstLevel {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    gap: 20px;
+    align-items: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    transition-property: color;
+    transition-timing-function: ease-in-out;
+    transition-duration: .3s;
+    margin-top: 20px;
+}
+
+.firstLevel svg {
+    transition-property: fill;
+    transition-timing-function: ease-in-out;
+    transition-duration: .3s;
+}
+
+.firstLevelActive, .firstLevel:hover {
+    color: var(--primary);
+    transition-property: color;
+    transition-timing-function: ease-in-out;
+    transition-duration: .3s;
+
+
+}
+
+.firstLevelActive svg, .firstLevel:hover svg {
+    fill: var(--primary);
+    transition-property: fill;
+    transition-timing-function: ease-in-out;
+    transition-duration: .3s;
+}
+
+.secondLevel {
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: var(--gray-dark);  
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.secondBlock {
+    margin-top: 20px;
+    margin-left: 12px;
+    padding-left: 32px;
+    border-left: 1px solid #dfdfdf;
+}
+.secondLevelBlock {
+    display: none;
+}
+
+.secondLevelBlockOpened {
+    display: block;
+}
+.secondLevelBlockOpened:last-child {
+    margin-bottom: 20px;
+}
+
+.thirdLevel {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: var(--gray-dark);
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    transition-property: color;
+    transition-timing-function: ease-in-out;
+    transition-duration: .3s;
+} 
+
+.thirdLevelActive, .thirdLevel:hover {
+    color: var(--primary);
+    transition-property: color;
+    transition-timing-function: ease-in-out;
+    transition-duration: .3s;
+}
